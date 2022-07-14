@@ -40,17 +40,20 @@ def No(htmlSkaitlis):
     skaitTabula = tabulas[5]
     
     skaitRindas = skaitTabula.find_all("a")
+
     Saite = skaitRindas[0]
+
     string = Saite.get('href')
+
     Skaitlis = str(re.search(r'\d+', string).group())
     
     with open("Lapu_skaits.txt", "w", encoding="utf-8") as text_file:
+
        text_file.write(f"{Skaitlis}")
+
        text_file.close()
 
-    #novilkt_lapas(Skaitlis)
-    #print(Skaitlis)
-      
+    #novilkt_lapas(Skaitlis)        
 No("Pieprasijumi/Lapa_1.html")
 
 def info(htmlDatne):
