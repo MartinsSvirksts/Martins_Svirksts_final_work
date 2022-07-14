@@ -47,7 +47,7 @@ def No(htmlSkaitlis):
 
     Skaitlis = str(re.search(r'\d+', string).group())
     
-    with open("Lapu_skaits.txt", "w", encoding="utf-8") as text_file:
+    with open("Pieprasijumi/Lapu_skaits.txt", "w", encoding="utf-8") as text_file:
 
        text_file.write(f"{Skaitlis}")
 
@@ -125,6 +125,6 @@ def izvilkt_datus(daudzums):
 
     saglabat_datus(visiDati)
 
-Cipars = int(open("Lapu_skaits.txt", "r").read())
+Cipars = int(open("Pieprasijumi/Lapu_skaits.txt", "r").read())
 izvilkt_datus(Cipars)
 print(Cipars)
